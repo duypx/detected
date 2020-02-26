@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vn.duypx.detected.HomeController">
+    <columnConstraints>
+        <ColumnConstraints />
+        <ColumnConstraints />
+        <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+    </rowConstraints>
+    <children>
+        <BorderPane prefHeight="550" prefWidth="550" GridPane.columnIndex="2">
+            <bottom>
+                <!--            <Button fx:id="startCamBtn" mnemonicParsing="false" onAction="#startCamera" text="Start Camera" BorderPane.alignment="CENTER" />-->
+                <AnchorPane BorderPane.alignment="CENTER">
+                    <children>
+                        <!--                  <Button text="Button" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0" />-->
+                        <Button fx:id="startCamBtn" mnemonicParsing="false" onAction="#startCamera" text="Start Camera" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
+                            <font>
+                                <Font name="Times New Roman" size="13.0" />
+                            </font></Button>
+                        <Button mnemonicParsing="false" onAction="#takeAPhoto" text="Take a photo" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+                            <font>
+                                <Font name="Times New Roman" size="13.0" />
+                            </font></Button>
+                    </children>
+                </AnchorPane>
+            </bottom>
+            <center>
+                <ImageView fx:id="currentFrame" fitHeight="600.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+            </center>
+            <top>
+                <Label fx:id="statusLabel" text="" BorderPane.alignment="CENTER">
+                    <font>
+                        <Font name="Times New Roman" size="13.0" />
+                    </font></Label>
+            </top>
+        </BorderPane>
+
+    </children>
+</GridPane>
